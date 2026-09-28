@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import type { Task } from 'entities/task/model/types';
 import styles from './TaskCard.module.css';
 
@@ -6,7 +7,7 @@ interface TaskCardProps {
   onRemove?: (id: string) => void;
 }
 
-export function TaskCard({ task, onRemove }: TaskCardProps) {
+export const TaskCard = memo(function TaskCard({ task, onRemove }: TaskCardProps) {
   return (
     <div className={styles.card}>
       <span className={styles.status}>
@@ -22,4 +23,4 @@ export function TaskCard({ task, onRemove }: TaskCardProps) {
       )}
     </div>
   );
-}
+});
