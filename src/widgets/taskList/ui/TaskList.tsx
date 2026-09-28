@@ -8,7 +8,7 @@ interface TaskListProps {
   tasks: Task[];
   filter: Filter;
   setFilter: (f: Filter) => void;
-  removeTask: (id: string) => void;
+  removeTask: (id: number) => void;
 }
 
 export function TaskList({ tasks, filter, setFilter, removeTask }: TaskListProps) {

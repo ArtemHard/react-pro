@@ -4,7 +4,7 @@ import styles from './TaskCard.module.css';
 
 interface TaskCardProps {
   task: Task;
-  onRemove?: (id: string) => void;
+  onRemove?: (id: number) => void;
 }
 
 export const TaskCard = memo(function TaskCard({ task, onRemove }: TaskCardProps) {
