@@ -1,0 +1,88 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 420px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.field input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.error {
+  color: #d32f2f;
+  font-size: 12px;
+}
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.linkRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.addButton,
+.removeButton,
+.submitButton,
+.resetButton {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.addButton {
+  align-self: flex-start;
+  background: #eef2ff;
+  color: #303f9f;
+}
+
+.removeButton {
+  background: #fdecea;
+  color: #d32f2f;
+}
+
+.removeButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.submitButton {
+  background: #1976d2;
+  color: #fff;
+}
+
+.resetButton {
+  align-self: flex-start;
+  background: #f5f5f5;
+  color: #333;
+}
+
+.success {
+  color: #2e7d32;
+  font-size: 14px;
+}
