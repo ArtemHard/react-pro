@@ -1,14 +1,18 @@
-import type { Filter } from 'widgets/taskList/model/useTasks';
 import styles from './FilterButton.module.css';
 
-interface FilterButtonProps {
+interface FilterButtonProps<T extends string> {
   label: string;
-  value: Filter;
-  active: Filter;
-  onClick: (f: Filter) => void;
+  value: T;
+  active: T;
+  onClick: (value: T) => void;
 }
 
-export function FilterButton({ label, value, active, onClick }: FilterButtonProps) {
+export function FilterButton<T extends string>({
+  label,
+  value,
+  active,
+  onClick,
+}: FilterButtonProps<T>) {
   return (
     <button
       className={`${styles.button} ${active === value ? styles.active : ''}`}
